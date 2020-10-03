@@ -1,0 +1,11 @@
+/code/Hi_MAP/preprocessed_truncated/*
+/code/Hi_MAP/model_newser_atten/*
+/code/Hi_MAP/Newser_data_test_src/*
+/code/Hi_MAP/newser_sent_500/*
+/code/Hi_MAP/output_newser/*
+/.vscode/settings.json
+
+
+!.gitkeep
+
+__pycache__/
