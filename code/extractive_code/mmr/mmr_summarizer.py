@@ -15,7 +15,7 @@ sentence_sim_exception = 0.000000000000000000001
 def load_data(data_path, file_name):
 	counter = 0
 	dataset = []
-	with open(data_path + file_name,'r') as fr:
+	with open(data_path + file_name,'r', encoding='utf8') as fr:
 		for line in fr:
 			dataset.append(line.strip())
 			counter += 1
@@ -348,7 +348,7 @@ if __name__=='__main__':
 
 			list_of_summarization.append(" ".join(tmp_summary))
 
-		with open(sys.argv[3], 'w') as fw:
+		with open(sys.argv[3], 'w', encoding='utf8') as fw:
 			for sample in list_of_summarization:
 				fw.write(sample + "\n")
 	else:
