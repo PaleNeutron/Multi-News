@@ -5,7 +5,7 @@ import sys
 
 def read_in_train_set(input_path, filename):
 	corpus = []
-	with open(input_path + filename, 'r') as fr:
+	with open(input_path + filename, 'r', encoding='utf-8') as fr:
 		for line in fr:
 			corpus.append(line.strip())
 	return corpus
@@ -60,7 +60,7 @@ if __name__ =='__main__':
 		corpus = read_in_train_set(input_path, sys.argv[2])
 		res = lexrank_summarize(corpus)
 
-		with open(sys.argv[3], 'w') as fw:
+		with open(sys.argv[3], 'w', encoding='utf8') as fw:
 			for sample in res:
 				fw.write(sample + "\n")
 	else:
