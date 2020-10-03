@@ -1,0 +1,12 @@
+python preprocess.py -train_src Newser_data_test_src/train.txt.src.tokenized.fixed.cleaned.final.truncated.txt ^
+                     -train_tgt Newser_data_test_src/train.txt.tgt.tokenized.fixed.cleaned.final.truncated.txt ^
+                     -valid_src Newser_data_test_src/val.txt.src.tokenized.fixed.cleaned.final.truncated.txt ^
+                     -valid_tgt Newser_data_test_src/val.txt.tgt.tokenized.fixed.cleaned.final.truncated.txt ^
+                     -save_data newser_sent_500/newser_sents ^
+                     -src_seq_length 10000 ^
+                     -tgt_seq_length 10000 ^
+                     -src_seq_length_trunc 500 ^
+                     -tgt_seq_length_trunc 300 ^
+                     -dynamic_dict ^
+                     -share_vocab ^
+                     -max_shard_size 10000000
