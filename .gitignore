@@ -5,7 +5,10 @@
 /code/Hi_MAP/output_newser/*
 /.vscode/settings.json
 
+.DS_Store
+preprocessed_truncated-20201003T072600Z-001.zip
 
 !.gitkeep
+
 
 __pycache__/
