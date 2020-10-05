@@ -61,7 +61,7 @@
                 "-encoder_type",
                 "brnn",
                 "-train_steps",
-                "10000",
+                "9100",
                 "-max_grad_norm",
                 "4",
                 "-dropout",
@@ -84,7 +84,51 @@
                 "-gpu_ranks",
                 "0",
                 "-save_checkpoint_steps",
-                "1000"
+                "100",
+                "-train_from",
+                "model_newser_atten/Feb17__step_9000.pt"
+            ]
+        },
+
+        {
+            "name": "run_inference",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/code/Hi_MAP/translate.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/code/Hi_MAP",
+            "args": [
+                "-gpu",
+                "0",
+                "-batch_size",
+                "8",
+                "-beam_size",
+                "4",
+                "-model",
+                "model_newser_atten/Feb17__step_9100.pt",
+                "-src",
+                "Newser_data_test_src/test.txt.src.tokenized.fixed.cleaned.final.truncated.txt",
+                "-output",
+                "output_newser/Feb17__step_9100_full.output",
+                "-min_length",
+                "200",
+                "-max_length",
+                "300",
+                "-verbose",
+                "-stepwise_penalty",
+                "-coverage_penalty",
+                "summary",
+                "-beta",
+                "5",
+                "-length_penalty",
+                "wu",
+                "-alpha",
+                "0.9",
+                "-verbose",
+                "-block_ngram_repeat",
+                "3",
+                "-ignore_when_blocking",
+                "story_separator_special_tag"
             ]
         }
     ]
